@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body{
+  background: #000;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1140px;
+  box-sizing: border-box;
+}
+
+h2{
+  font-size: 40px;
+  padding: 10px 0px;
+}
+
+.films{
+  padding-top: 50px;
+}
+
+.films__container{
+  margin-top: 40px;
+}
+
+main{
+  background: #000;
+  color: #fff;
+}
+
+.films__container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-right: -20px;
+}
+
