@@ -4,14 +4,17 @@ import FilmItem from './FilmItem';
 
 
 function FilmsBlock({films}) {
+
+
   return (
     <div className='films'>
         <Container>
           <h2 className='films__heading'>Now Playing</h2>
           <div className='films__container'>
-          {films.map((film, index) =>{
-            return (<FilmItem poster={film.poster} info={film.info} key={index}></FilmItem>)
+          {Object.keys(films).length === 0 ? <h1>lol</h1> : films.results.map((film, index) =>{
+            return (<FilmItem poster={`https://image.tmdb.org/t/p/original/${film.poster_path}`} info={film} key={index}></FilmItem>)
           })}
+          {}
           </div>
         </Container>
       </div>

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 import Container from '../../Container';
 import cl from "./Navigation.module.css"
 
@@ -8,8 +9,8 @@ function Navigation() {
         <Container className={cl.container}>
             <div className={cl.logo}>Popcorn cinema</div>
             <div className={cl.menu}>
-                <a href="/" className={cl.menu__item}>Now Playing</a>
-                <a href="/" className={cl.menu__item}>Genres</a>
+                <Link to="/" className={cl.menu__item}>Now Playing</Link>
+                <Link to="/genres" className={cl.menu__item}>Genres</Link>
                 <a href="https://github.com/DILLIR/movie-site" className={cl.menu__item}>GitHub repo</a>
             </div>
             <form className={cl.form}>
