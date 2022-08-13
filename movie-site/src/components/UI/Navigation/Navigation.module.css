@@ -64,4 +64,6 @@ nav a:hover{
     border: 0px solid black;
     background: #fff;
     cursor: pointer;
+    color: #000;
+    font-size: 16px;
 }

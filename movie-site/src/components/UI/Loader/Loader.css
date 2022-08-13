@@ -1,0 +1,10 @@
+.loader__block{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.loader__img{
+    width: 50px;
+}

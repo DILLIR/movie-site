@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from "react-router-dom";
 import Container from '../../Container';
 import cl from "./Navigation.module.css"
 
 function Navigation() {
+
+  const [searchQuery, setSearchQuery] = useState("")
+
   return (
     <nav>
         <Container className={cl.container}>
@@ -14,8 +17,8 @@ function Navigation() {
                 <a href="https://github.com/DILLIR/movie-site" className={cl.menu__item}>GitHub repo</a>
             </div>
             <form className={cl.form}>
-                <input type="text" placeholder='Search...'  className={cl.input}/>
-                <button className={cl.submit}>submit</button>
+                <input type="text" placeholder='Search...'  className={cl.input} value={searchQuery} onChange={(e) => {setSearchQuery(e.target.value)}}/>
+                <Link to={"/search/" + searchQuery} className={cl.submit} onClick={()=>{setSearchQuery("")}}>Submit</Link>
             </form>
         </Container>
     </nav>

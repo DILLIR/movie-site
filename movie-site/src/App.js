@@ -1,19 +1,23 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
-import CurrentMovies from "./pages/CurrentMovies"
+
 import './App.css';
 import Navigation from "./components/UI/Navigation/Navigation";
-import Genres from "./pages/Genres";
+
+import Footer from "./components/UI/Footer/Footer";
+import {routs} from "./router/router"
 
 function App() {
   return (
     <BrowserRouter>
-      <Navigation></Navigation>
+      <Navigation/>
       <Routes>
-        <Route path="/" element={<CurrentMovies/>}/>
-        <Route path="/genres" element={<Genres/>}/>
+        {routs.map(route => {
+          return (<Route path={route.path} key={route.path} element={<route.element/>} />)
+        })}
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }

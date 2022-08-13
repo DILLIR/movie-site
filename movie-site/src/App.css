@@ -24,10 +24,6 @@ h2{
   padding-top: 50px;
 }
 
-.films__container{
-  margin-top: 40px;
-}
-
 main{
   background: #000;
   color: #fff;
@@ -38,7 +34,12 @@ main{
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin-top: 20px;
   margin-right: -20px;
+}
+
+.films__heading{
+  color: #fff;
 }
 
 @media screen and (max-width: 1140px) {
