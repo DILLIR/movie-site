@@ -2,13 +2,15 @@ import React, {useState} from 'react'
 import Modal from './UI/Modal/Modal';
 import "./css/FilmItem.css";
 
-function FilmItem({poster, info}) {
+function FilmItem({poster, info, setImgLoaded}) {
 
   const [show, setShow] = useState(false);
 
+  const [imgClass, setImgClass] = useState(["film"]);
+
   return (
-    <div className='film'>
-        <img src={poster} alt="" onClick={() => {setShow(true)}}/>
+    <div className={imgClass.join(" ")} >
+        <img src={poster} alt=""  onLoad={(e)=>{setImgClass(["film", "loaded"])}} onClick={() => {setShow(true)}}/>
         <Modal isVisible={show} setVisible={setShow}>
           <div className='film__modal'>
               <img className='film__img' src={poster} alt="" />

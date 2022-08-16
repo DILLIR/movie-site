@@ -1,8 +1,18 @@
 .film{
-    max-width: 212px;
+    width: 212px;
+    height: 318px;
+    background: #a1a1a1;
     margin-bottom: 2%;
     cursor: pointer;
     margin-right: 20px;
+}
+
+.loaded{
+    background: none;
+}
+
+.unloaded{
+    opacity: 0.1;
 }
   
 .film img{
@@ -93,4 +103,26 @@
     width: 20px;
     margin-top: -2px;
     background: url("../../img/star.png");
+}
+
+@media screen and (max-width: 1140px) {
+    .film{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .film__modal{
+        flex-direction: column;
+    }
+    .film__img{
+        align-self: center;
+        margin-bottom: 20px;
+    }
+    .film__info{
+        width: 100%;
+    }
+    .film__name{
+        text-align: center;
+    }
 }

@@ -25,3 +25,9 @@
     font-size: 50px;
     text-align: center;
 }
+
+@media screen and (max-width: 1140px) {
+    .banner h1{
+     margin-left: 0px;
+    }
+}

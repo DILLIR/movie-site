@@ -29,14 +29,19 @@ main{
   color: #fff;
 }
 
+
+
 .films__container{
   display: flex;
   align-items: center;
+  width: fit-content;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 20px;
   margin-right: -20px;
 }
+
+
 
 .films__heading{
   color: #fff;
@@ -45,5 +50,15 @@ main{
 @media screen and (max-width: 1140px) {
   .container{
     padding: 0 10px;
+  }
+  .films__container{
+    justify-content: center;
+  }
+  .films__heading{
+    text-align: center;
+  }
+  h1{
+    width: 100%;
+    margin-left: 0;
   }
 }

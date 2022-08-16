@@ -4,6 +4,7 @@ nav{
     font-family: "Roboto";
     width: 100%;
     border-bottom: 0.5px solid #fff;
+    transition: height 0.3s;
   }
   
 nav .container{
@@ -11,6 +12,7 @@ nav .container{
     align-content: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    transition: all 0.3s;
 }
 
 .menu{
@@ -18,18 +20,18 @@ nav .container{
     align-items: center;
 }
 
-.form{
+form{
     display: flex;
     align-items: center;
 }
 
-.logo{
+.logo a{
     font-size: 30px;
     color: #fff;
 }
 
 nav a:not(a:last-child){
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 nav a{
@@ -39,31 +41,121 @@ nav a{
     transition: all 0.5s;
 }
 
-nav a:hover{
+nav a:hover, .menu__item span:hover{
     opacity: 0.5;
 }
 
-.input{
-    border: 0px solid #fff;
-    border-bottom: 1px solid #fff;
-    padding: 5px 15px;
-    background: transparent;
-    margin-right: 25px;
-    padding-left: 0;
-    outline: none;
-    color: #fff;
-}
 
-.input:focus{
-    border: 0px solid #fff;
-    border-bottom: 1px solid #fff;
-}
 
-.submit{
-    padding: 6px 15px;
-    border: 0px solid black;
+.submenu{
+    position: absolute;
+    top: 30px;
     background: #fff;
-    cursor: pointer;
+    display: none;
+    flex-direction: column;
+}
+
+.submenu.active{
+    display: flex;
+}
+
+.genre{
     color: #000;
-    font-size: 16px;
+    padding: 5px 10px;
+    width: 100%;
+    transition: all 0.3s;
+    border-bottom: 1px solid #000;
+}
+
+.genre:hover{
+    background: #000;
+    opacity: 1;
+    color: #fff;
+    border-bottom: 1px solid #fff
+}
+
+.menu__item{
+    position: relative;
+}
+
+.menu__item span{
+    color: #fff;
+    font-size: 19px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.menu__icon{
+    display: none;
+}
+
+.menu__icon img{
+    display: block;
+    height: 32px;
+    width: 32px;
+}
+
+.mobile .container{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.mobile .logo{
+    padding-bottom: 5px;
+}
+
+.mobile .menu__icon img{
+    display: block;
+    height: 32px;
+    width: 32px;
+}
+
+.mobile .menu{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+    padding-top: 15px;
+    align-items: flex-start;
+    width: 100%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.mobile .menu__item{
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.mobile .menu__item span{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}
+
+.mobile form{
+    display: flex !important;
+}
+
+.mobile{
+    transition: all 0.3s;
+}
+
+@media screen and (max-width: 950px){
+    .menu__icon{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+    form{
+        display: none !important;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
 }

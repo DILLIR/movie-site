@@ -5,7 +5,6 @@ import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Navigation from "./components/UI/Navigation/Navigation";
 
-import Footer from "./components/UI/Footer/Footer";
 import {routs} from "./router/router"
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
           return (<Route path={route.path} key={route.path} element={<route.element/>} />)
         })}
       </Routes>
-      <Footer/>
     </BrowserRouter>
   );
 }
