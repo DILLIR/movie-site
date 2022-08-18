@@ -6,10 +6,12 @@ import banerImg from "../img/geoffrey-moffett-TFRezw7pQwI-unsplash.jpg";
 import FilmsService from '../API/FilmsService';
 import {useParams} from "react-router-dom";
 import Loader from '../components/UI/Loader/Loader';
+import {genres} from "../data/genres"
 
 function Genres() {
 
   const params = useParams();
+
 
   const [films, setFilms] = useState({});
   const [searchFilms, isLoading, errorFilms, setError] = useFeatching(async () => {
@@ -26,11 +28,16 @@ function Genres() {
     // eslint-disable-next-line
   }, [params.genreId]);
 
+  function idToGenre(searchParams){
+     // eslint-disable-next-line
+    return genres.filter(item => item.id == searchParams.genreId)[0].name;
+  }
+
   return (
     <main>
-        <Baner src={banerImg} text="Watch your favourite genre"></Baner>
+        <Baner src={banerImg} text={"Watch your favourite genre - " + idToGenre(params)}></Baner>
         {errorFilms && <h1 style={{color: "red", textAlign: "center"}}>Error: {errorFilms}</h1>}
-        <FilmsBlock films={films}  name="Now Playing" />
+        <FilmsBlock films={films}  name={idToGenre(params)} />
         {isLoading && !errorFilms && <Loader/>}
     </main>
   )

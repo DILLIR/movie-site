@@ -33,7 +33,6 @@ function FilmsQuery() {
 
   useEffect(() => {
     searchFilms(page);
-    console.log(page);
     // eslint-disable-next-line
   }, [page]);
 
@@ -46,7 +45,7 @@ function FilmsQuery() {
   return (
     <main>
       {errorFilms && <h1 style={{color: "red", textAlign: "center"}}>Error: {errorFilms}</h1>}
-      <FilmsBlock films={films}  name="Search results" />
+      <FilmsBlock films={films}  name={"Search results - " + params.query} />
       <div className='odserver' ref={lastElement} style={{height: 30}}></div>
       {isLoading && !errorFilms && <Loader/>}
     </main>

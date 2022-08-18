@@ -18,7 +18,6 @@ function FilmItem({poster, info, setImgLoaded}) {
                 <h3 className='film__name'>{info.original_title}</h3>
                 <p className='film__rating'>{info.vote_average}</p>
                 <p className='film__release'>Realise date: {info.release_date}</p>
-                <a href="https://en.wikipedia.org/wiki/Main_Page" className='film__play'>play trailer</a>
                 <p className='film__desc'>{info.overview}</p>
               </div>
             </div>
@@ -27,4 +26,4 @@ function FilmItem({poster, info, setImgLoaded}) {
   )
 }
 
-export default FilmItem
+export default FilmItem;

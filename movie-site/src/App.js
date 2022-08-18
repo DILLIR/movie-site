@@ -12,9 +12,7 @@ function App() {
     <BrowserRouter>
       <Navigation/>
       <Routes>
-        {routs.map(route => {
-          return (<Route path={route.path} key={route.path} element={<route.element/>} />)
-        })}
+        {routs.map(route => {return (<Route path={route.path} key={route.path} element={<route.element/>} />)})}
       </Routes>
     </BrowserRouter>
   );
