@@ -34,9 +34,9 @@ All technologies I used are here.
   
 ## Challenges and Solutions
 
-1. **Challenge:** One of the challenges was to make Infinite Scroll and render new films properly using react. 
+1. **Challenge:** First of the challenges was to make Infinite Scroll and render new films properly using react. 
 
-    **Solution:** I used intersection observer API, which tracks whether an object is in sight and performs a callback function which fetches new films. Also, it is needed to pass to function current page, but not set it before calling, because changing state is async function which doesn't affect straightly to the value. Also, I decomposed this solutions in different parts.
+    **Solution:** I used intersection observer API, which tracks whether an object is in sight and performs a callback function which fetches new films. Also, it is needed to pass to function current page, but not set it before calling the function, because changing state is async function which doesn't affect atonce to the value. Also, I decomposed this solution in different parts.
 
     **using observer** 
     ```js
@@ -49,7 +49,7 @@ All technologies I used are here.
    
 2. **Challenge:** To implement infinite scroll into search page and to properly show the page of result.
 
-     **Solution:** Firstly, I created new useEffect and added dependency search query, but it worked not well because when the query was changed, the page was still the same. I tried to change page state before fetching, but because changing state is async function which doesn't affect straightly to the value, fetching was with old value of page. So, I changed code a bit, and now I passed page and set it in callback function of fetching.
+     **Solution:** First, I created new useEffect and added dependency search query, but it worked not well because when the query was changed, the page was still the same. I tried to change page state before fetching, but because changing state is async function which doesn't affect atonce to the value, fetching was with old value of page. So, I changed code a bit, and now I passed page and set it in callback function of fetching.
 
     **using useEffect** 
     ```js
@@ -59,7 +59,7 @@ All technologies I used are here.
     ```
 ## About site with screenshots
 
-The first what you see when you open a site is its main page where you can see current premiers, and you can scroll down to load more of them.
+First what you see when you open a site is its main page where you can see current premiers, and you can scroll down to load more of them.
 
 ![main page](readme_img/1.png)
 
@@ -76,11 +76,11 @@ Also, you can click on genres and select your favorite to view films from it.
 
 ![main page](readme_img/8.png)
 
-And the last but not the least page is search page. You can type your search query into input in navbar and click submit or press Enter to search. Then the search page is loaded with results.
+And the last page is a search page. You can type your search query into input in navbar and click submit or press Enter to search. Then the search page is loaded with results.
 
 ![main page](readme_img/7.png)
 
-If you have bad internet connection, you will need to wait for images to load and while they are loading, you will see gray placeholders.
+If you have bad internet connection, you will need to wait for pictures to load and while they are loading, you are watching gray placeholders.
 
 ![main page](readme_img/6.png)
 
