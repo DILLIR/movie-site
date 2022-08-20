@@ -13,7 +13,7 @@ function FilmsQuery() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  const [searchFilms, isLoading, errorFilms, setError] = useFeatching(async (page, clearPage = false) => {
+  const [searchFilms, isLoading, errorFilms, setError, setIsLoading] = useFeatching(async (page, clearPage = false) => {
     let response = await FilmsService.searchFilms(params.query, page);
     if(!response.success && response.success !== undefined){
       setError(response.status_message)
@@ -26,13 +26,16 @@ function FilmsQuery() {
     };
   })
   
+  console.log(page)
+
   useEffect(() => {
     searchFilms(1,true);
     // eslint-disable-next-line
   }, [params.query]);
 
   useEffect(() => {
-    searchFilms(page);
+    setIsLoading(true);
+    setTimeout(() => { searchFilms(page)}, 700);
     // eslint-disable-next-line
   }, [page]);
 

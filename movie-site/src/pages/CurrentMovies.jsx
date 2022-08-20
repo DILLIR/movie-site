@@ -15,7 +15,7 @@ function CurrentMovies() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  const [featchFilms, isLoading, errorFilms, setError] = useFeatching(async (page) => {
+  const [featchFilms, isLoading, errorFilms, setError, setIsLoading] = useFeatching(async (page) => {
     let response = await FilmsService.getFilms(page);
     if(!response.success && response.success !== undefined){
       setError(response.status_message)
@@ -35,7 +35,8 @@ function CurrentMovies() {
   const lastElement = useRef();
 
   useObserver(lastElement, page < totalPages, isLoading, ()=>{
-      setPage(p=>p+1)
+      setIsLoading(true);
+      setTimeout(() =>{setPage(p=>p+1);}, 700);
   })
 
   return (
@@ -43,8 +44,8 @@ function CurrentMovies() {
       <Baner src={banerImg} text="Watch our current premieres"></Baner>
       {errorFilms && <h1 style={{color: "red", textAlign: "center"}}>Error: {errorFilms}</h1>}
       <FilmsBlock films={films}  name="Now Playing" />
-      {isLoading && !errorFilms && <Loader/>}
       <div className='odserver' ref={lastElement} style={{height: 30}}></div>
+      {isLoading && !errorFilms && <Loader/>}
     </main>
    
   )

@@ -14,5 +14,5 @@ export const useFeatching = function (callback){
             setIsLoading(false);
         }
     }
-    return [fetching, isLoading, error, setError]
+    return [fetching, isLoading, error, setError, setIsLoading]
 }
