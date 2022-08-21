@@ -1,21 +1,25 @@
-import React from 'react';
-import cl from "./Modal.module.css"
+import React from "react";
+import cl from "./Modal.module.css";
 
-function Modal({children, isVisible, setVisible}) {
+function Modal({ children, isVisible, setVisible }) {
+  let classes = [cl.modal];
 
-    let classes = [cl.modal]
-
-    if(isVisible){
-        classes.push(cl.active)
-    }
+  if (isVisible) {
+    classes.push(cl.active);
+  }
 
   return (
     <div className={classes.join(" ")} onClick={(e) => setVisible(false)}>
-        <div className={cl.modal__container} onClick={(e) => {e.stopPropagation()}}>
-            {children}
-        </div>
+      <div
+        className={cl.modal__container}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
+        {children}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Modal
+export default Modal;

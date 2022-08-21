@@ -1,37 +1,36 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
 }
 
-body{
+body {
   background: #000;
+  scroll-behavior: smooth;
 }
 
-.container{
+.container {
   margin: 0 auto;
   max-width: 1140px;
   box-sizing: border-box;
 }
 
-h2{
+h2 {
   font-size: 40px;
   padding: 10px 0px;
 }
 
-.films{
+.films {
   padding-top: 50px;
 }
 
-main{
+main {
   background: #000;
   color: #fff;
 }
 
-
-
-.films__container{
+.films__container {
   display: flex;
   align-items: center;
   width: fit-content;
@@ -41,23 +40,21 @@ main{
   margin-right: -20px;
 }
 
-
-
-.films__heading{
+.films__heading {
   color: #fff;
 }
 
 @media screen and (max-width: 1140px) {
-  .container{
+  .container {
     padding: 0 10px;
   }
-  .films__container{
+  .films__container {
     justify-content: center;
   }
-  .films__heading{
+  .films__heading {
     text-align: center;
   }
-  h1{
+  h1 {
     width: 100%;
     margin-left: 0;
   }
