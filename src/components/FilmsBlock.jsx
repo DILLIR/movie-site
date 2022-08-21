@@ -2,9 +2,11 @@ import React from "react";
 import Container from "./Container";
 import FilmItem from "./FilmItem";
 
-function FilmsBlock({ films, name }) {
+const FilmsBlock = React.forwardRef(function (props, ref) {
+  const { films, name } = props;
+
   return (
-    <div className="films">
+    <div className="films" ref={ref}>
       <Container>
         <h2 className="films__heading">{name}</h2>
         <div className="films__container">
@@ -15,7 +17,7 @@ function FilmsBlock({ films, name }) {
               return (
                 film.poster_path && (
                   <FilmItem
-                    poster={`https://image.tmdb.org/t/p/original${film.poster_path}`}
+                    poster={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
                     info={film}
                     key={film.id}
                   ></FilmItem>
@@ -27,6 +29,6 @@ function FilmsBlock({ films, name }) {
       </Container>
     </div>
   );
-}
+});
 
 export default FilmsBlock;

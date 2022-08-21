@@ -8,9 +8,6 @@ nav {
   position: fixed;
 }
 
-nav.sticky {
-}
-
 nav .container {
   display: flex;
   align-content: center;

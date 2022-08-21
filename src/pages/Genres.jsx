@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import FilmsBlock from "../components/FilmsBlock";
 import Baner from "../components/UI/Banner/Baner";
 import { useFeatching } from "../Hooks/useFeatching";
@@ -35,6 +35,14 @@ function Genres() {
 
   let activeGenre = idToGenre(params);
 
+  const scrollElement = useRef();
+
+  useEffect(() => {
+    setTimeout(() => {
+      scrollElement.current.scrollIntoView({ block: "start" });
+    }, 1000);
+  });
+
   return (
     <main>
       <Baner
@@ -46,8 +54,8 @@ function Genres() {
           Error: {errorFilms}
         </h1>
       )}
-      <FilmsBlock films={films} name={idToGenre(params)} />
       {isLoading && !errorFilms && <Loader />}
+      <FilmsBlock ref={scrollElement} films={films} name={idToGenre(params)} />
     </main>
   );
 }
