@@ -3,7 +3,7 @@ import Container from "./Container";
 import FilmItem from "./FilmItem";
 
 const FilmsBlock = React.forwardRef(function (props, ref) {
-  const { films, name } = props;
+  let { films, name } = props;
 
   return (
     <div className="films" ref={ref}>

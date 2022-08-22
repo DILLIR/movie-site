@@ -5,11 +5,12 @@ import FilmsService from "../API/FilmsService";
 import { useParams } from "react-router-dom";
 import Loader from "../components/UI/Loader/Loader";
 import { useObserver } from "../Hooks/useObserver";
+import uniqueObjects from "../utilities/uniqueObjects";
 
 function FilmsQuery() {
   const params = useParams();
 
-  const [films, setFilms] = useState([]);
+  let [films, setFilms] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
@@ -39,6 +40,8 @@ function FilmsQuery() {
     }, 1000);
     // eslint-disable-next-line
   }, [page]);
+
+  films = uniqueObjects(films, "id");
 
   const lastElement = useRef();
 
