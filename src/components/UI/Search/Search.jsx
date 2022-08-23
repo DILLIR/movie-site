@@ -11,7 +11,7 @@ function Search() {
   function onEnter(e) {
     if (e.key === "Enter") {
       e.preventDefault();
-      navigate("/search/" + searchQuery);
+      navigate("/movie-site/search/" + searchQuery);
       setSearchQuery("");
     }
   }
@@ -31,7 +31,7 @@ function Search() {
         }}
       />
       <Link
-        to={"/search/" + searchQuery}
+        to={"/movie-site/search/" + searchQuery}
         className={cl.submit}
         onClick={() => {
           setSearchQuery("");

@@ -30,7 +30,7 @@ function Navigation() {
           </div>
         </div>
         <div className={cl.menu}>
-          <Link to="/" className={cl.menu__item}>
+          <Link to="/movie-site/" className={cl.menu__item}>
             Now Playing
           </Link>
           <div className={[cl.menu__item].join("")}>
@@ -47,7 +47,7 @@ function Navigation() {
               {genres.map((genre) => {
                 return (
                   <Link
-                    to={"/genres/" + genre.id}
+                    to={"/movie-site/genres/" + genre.id}
                     key={genre.id}
                     className={cl.genre}
                     onClick={() => {
