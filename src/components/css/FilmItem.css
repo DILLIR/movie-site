@@ -5,10 +5,10 @@
   margin-bottom: 2%;
   cursor: pointer;
   margin-right: 20px;
-  transition: all 0.3s;
+
 }
 
-.film:hover{
+.film>img:hover{
   scale: 1.05;
 }
 
@@ -20,8 +20,9 @@
   opacity: 0.1;
 }
 
-.film img {
+.film>img {
   max-width: 100%;
+  transition: all 0.3s;
 }
 
 .film__modal {
