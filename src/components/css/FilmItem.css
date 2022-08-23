@@ -5,6 +5,11 @@
   margin-bottom: 2%;
   cursor: pointer;
   margin-right: 20px;
+  transition: all 0.3s;
+}
+
+.film:hover{
+  scale: 1.05;
 }
 
 .loaded {

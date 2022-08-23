@@ -6,6 +6,7 @@ nav {
   border-bottom: 0.5px solid #fff;
   transition: height 0.3s;
   position: fixed;
+  z-index: 1000;
 }
 
 nav .container {
