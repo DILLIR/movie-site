@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/movie-site/static/css/main.de00eab0.css",
-    "main.js": "/movie-site/static/js/main.42654e48.js",
+    "main.js": "/movie-site/static/js/main.74bc4b29.js",
     "static/media/geoffrey-moffett-TFRezw7pQwI-unsplash.jpg": "/movie-site/static/media/geoffrey-moffett-TFRezw7pQwI-unsplash.3e9a08425e7e76258771.jpg",
     "static/media/loader_img.svg": "/movie-site/static/media/loader_img.e2fcd81d53386a5a3bf705090045dd3c.svg",
     "index.html": "/movie-site/index.html",
     "static/media/menu-burger.svg": "/movie-site/static/media/menu-burger.877a4f0c0e78ed9773bf2b3481c0d518.svg",
     "main.de00eab0.css.map": "/movie-site/static/css/main.de00eab0.css.map",
-    "main.42654e48.js.map": "/movie-site/static/js/main.42654e48.js.map"
+    "main.74bc4b29.js.map": "/movie-site/static/js/main.74bc4b29.js.map"
   },
   "entrypoints": [
     "static/css/main.de00eab0.css",
-    "static/js/main.42654e48.js"
+    "static/js/main.74bc4b29.js"
   ]
 }
