@@ -3,8 +3,8 @@ import CurrentMovies from "../pages/CurrentMovies";
 import FilmsQuery from "../pages/FilmsQuery";
 
 export const routs = [
-  { path: "/", element: CurrentMovies },
-  { path: "/genres/:genreId", element: Genres },
-  { path: "/search/:query", element: FilmsQuery },
-  { path: "/search/", element: FilmsQuery },
+  { path: "/movie-site/", element: CurrentMovies },
+  { path: "/movie-site/genres/:genreId", element: Genres },
+  { path: "/movie-site/search/:query", element: FilmsQuery },
+  { path: "/movie-site/search/", element: FilmsQuery },
 ];
