@@ -19,7 +19,7 @@ function Navigation() {
     <nav className={navClasses}>
       <Container className={cl.container}>
         <div className={cl.logo}>
-          <Link to="/">Popcorn cinema</Link>
+          <Link to="/movie-site/">Popcorn cinema</Link>
           <div
             className={cl.menu__icon}
             onClick={() => {
