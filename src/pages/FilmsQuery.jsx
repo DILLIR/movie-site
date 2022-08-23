@@ -10,7 +10,7 @@ import uniqueObjects from "../utilities/uniqueObjects";
 function FilmsQuery() {
   const params = useParams();
 
-  let [films, setFilms] = useState([]);
+  const [films, setFilms] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
@@ -41,8 +41,6 @@ function FilmsQuery() {
     // eslint-disable-next-line
   }, [page]);
 
-  films = uniqueObjects(films, "id");
-
   const lastElement = useRef();
 
   useObserver(lastElement, page < totalPages, isLoading, () => {
@@ -56,7 +54,7 @@ function FilmsQuery() {
           Error: {errorFilms}
         </h1>
       )}
-      <FilmsBlock films={films} name={"Search results - " + params.query} />
+      <FilmsBlock films={uniqueObjects(films, "id")} name={"Search results - " + params.query} />
       <div className="odserver" ref={lastElement} style={{ height: 30 }}></div>
       {isLoading && !errorFilms && <Loader />}
     </main>
