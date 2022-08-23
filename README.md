@@ -8,6 +8,10 @@ The idea of creating this project comes from this [repo](https://github.com/dang
 
 [GitHub repo](https://github.com/DILLIR/movie-site/tree/main)
 
+[Live url](https://dillir.github.io/movie-site/)
+
+[My portfolio](https://dillir.github.io/)
+
 ## Jump right to the topic
 
 [Description/Overview](#descriptionoverview)
