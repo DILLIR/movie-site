@@ -38,7 +38,8 @@ All technologies I used are here.
 - create-react-app
 - Intersection Observer API
 
-## Challenges and Solutions
+<details>
+<summary>## Challenges and Solutions</summary>
 
 1. **Challenge:** First of the challenges was to make Infinite Scroll and render new films properly using react.
 
@@ -65,7 +66,7 @@ All technologies I used are here.
      searchFilms(1);
    }, [params.query]);
    ```
-
+</details>
 ## About site with screenshots
 
 First what you see when you open a site is its main page where you can see current premiers, and you can scroll down to load more of them.
